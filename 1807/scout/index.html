@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+		<title>1807 Scouting App</title>
+		<script src="resources/js/easy.qrcode.min.js"></script>
+		<script src="resources/js/TBAInterface.js"></script>
+		<script src="resources/js/scouting.js"></script>
+		<script src="2023/scouting_config.js"></script>
+		<link rel="stylesheet" href="resources/css/1807scouting.css">
+	</head>
+
+	<body>
+	<img src="resources/img/musical-notes.gif" style="z-index: 1000; position: absolute; width: 110px; left: 10%; top: 2.50%; pointer-events: none;">
+	<img src="resources/img/musical-notes.gif" style="z-index: 1000; position: absolute; width: 110px; left: 70%; top: 2.50%; pointer-events: none;">
+		<form id="scoutingForm" onsubmit="return false">
+			<div id="main-panel-holder">
+				<div id="prematch" class="main-panel">
+					<h1 class="page_title"></h1>
+					<h2>Pre-Match</h2>
+					<p class="match-label"><input type="button" class="nextButton" value="Next" onclick="swipePage(1)"></p>
+					<table id="prematch_table">
+					<!-- ###PRE-MATCH-COMPONENTS###-->
+					</table>
+					<!--<p class="match-label"><input type="button" class="fancybutton" value="Next" onclick="swipePage(1)"></p>-->
+				</div>
+
+				<div id="auton" class="main-panel">
+					<h1 class="page_title"></h1>
+					<h2>Auton</h2>
+					<p class="match-label"><input type="button" class="prevButton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp; 
+                                           <input type="button" class="nextButton" value="Next" onclick="swipePage(1)"></p>
+					<table id="auton_table">
+					<!-- ###AUTON-COMPONENTS###-->
+					</table>
+					<!--<p class="match-label"><input type="button" class="fancybutton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp; 
+                                           <input type="button" class="fancybutton" value="Next" onclick="swipePage(1)"></p>-->
+				</div>
+
+				<div id="teleop" class="main-panel">
+					<h1 class="page_title"></h1>
+					<h2>Tele-Op</h2>
+					<p class="match-label"><input type="button" class="prevButton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp;
+                                           <input type="button" class="nextButton" value="Next" onclick="swipePage(1)"></p>
+					<table id="teleop_table">
+						<!-- ###TELEOP-COMPONENTS###-->
+					</table>
+					<!--<p class="match-label"><input type="button" class="fancybutton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp; 
+                                           <input type="button" class="fancybutton" value="Next" onclick="swipePage(1)"></p>-->
+				</div>
+
+				<div id="endgame" class="main-panel">
+					<h1 class="page_title"></h1>
+					<h2>Endgame</h2>
+					<p class="match-label"><input type="button" class="prevButton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp;
+                                           <input type="button" class="nextButton" value="Next" onclick="swipePage(1)"></p>
+					<table id="endgame_table">
+						<!-- ###ENDGAME-COMPONENTS###-->
+					</table>
+					<!--<p class="match-label"><input type="button" class="fancybutton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp; 
+                                           <input type="button" class="fancybutton" value="Next" onclick="swipePage(1)"></p>-->
+				</div>
+
+				<div id="post-match" class="main-panel">
+					<h1 class="page_title"></h1>
+					<h2>Post-Match</h2>
+					<p class="match-label"><input type="button" class="prevButton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp;
+                                           <input type="button" class="nextButton" value="Next" onclick="swipePage(1)"></p>
+					<table id="postmatch_table">
+						<!-- ###POST-MATCH-COMPONENTS###-->
+					</table>
+					<!--<p class="match-label"><input type="button" class="fancybutton" value="Prev" onclick="swipePage(-1)">&nbsp;&nbsp;&nbsp;&nbsp; 
+                                           <input type="button" class="fancybutton" value="Next" onclick="swipePage(1)"></p>-->
+				</div>
+
+				<div id="qr-code" class="main-panel">
+					<h1 class="page_title"></h1>
+					<h2>Generate QR Code</h2>
+					<p class="match-label"><input type="button" class="prevButton" value="Prev" onclick="swipePage(-1)"></p>
+					<p id="qr-info"><span id="display_qr-info" style="border: none; text-align: center;"></span></p>
+					<table id="qr-table">
+                        <tr><td width="5%">&nbsp;</td>
+                            <td width="90%">
+                                <div id="qrcode" style="text-align:center">
+                                    <script>
+                                        // Create QRCode Object
+                                        qr = new QRCode(document.getElementById("qrcode"), options)
+                                    </script>
+                                </div></td>
+                            <td width="5%">&nbsp;</td></tr></table>
+					<p></p>
+					<div id="clearButton">
+						<button type="button" class="nextButton" onclick="clearForm()">Clear Form</button>
+					</div>
+					<br>
+				</div>
+			</div>
+		</body>
+	</form>
+</html>

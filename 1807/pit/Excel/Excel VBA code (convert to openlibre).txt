@@ -1,0 +1,130 @@
+Sub ScanMatchScoutingData()
+    saveMatchScoutingData (getInput())
+End Sub
+
+Public Function getInput()
+    getInput = InputBox("Scan QR Code", "Match Scouting Input")
+End Function
+
+Public Function ArrayLen(arr As Variant) As Integer
+    ArrayLen = UBound(arr) - LBound(arr) + 1
+End Function
+
+Sub saveMatchScoutingData(inp As String)
+    Dim fields
+    Dim par
+    Dim value
+    Dim key
+    Dim table As ListObject
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    Dim mapper
+    Set mapper = CreateObject("Scripting.Dictionary")
+    Dim data
+    Set data = CreateObject("Scripting.Dictionary")
+    Dim tableName As String
+    tableName = "ScoutingData"
+
+    ' Set up map
+    ' Fields for every year
+    mapper.Add "s", "scouter"
+    mapper.Add "e", "eventCode"
+    mapper.Add "l", "matchLevel"
+    mapper.Add "m", "matchNumber"
+    mapper.Add "r", "robot"
+    mapper.Add "t", "teamNumber"
+
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    ' CRITICAL - map fields to match the data field from the web page that collects scouting data
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    ' Additional custom mapping
+    'mapper.Add "f", "fouls"
+    'mapper.Add "c", "climb"
+    'mapper.Add "dr", "defenseRating"
+    'mapper.Add "d", "died"
+    'mapper.Add "to", "tippedOver"
+    'mapper.Add "cf", "cardFouls"
+    'mapper.Add "co", "comments"
+    
+    
+    If inp = "" Then
+        Exit Sub
+    End If
+
+    'MsgBox (inp)
+    
+    fields = Split(inp, ";")
+    
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    ' Safety Precaution - Check if we have the right number of input fields
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    ' danny - check, give msgbox if they want to continue recording data or leave now
+    
+    
+    If ArrayLen(fields) > 0 Then
+        Dim i As Integer
+        Dim str
+
+        i = 0
+
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        ' Parse the collected data into each field and value
+        '
+        ' For example field=value
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        For Each str In fields
+            par = Split(str, "=")
+            key = par(0)
+            value = par(1)
+            If mapper.Exists(key) Then
+                key = mapper(key)
+            End If
+            data.Add key, value
+        Next
+
+        tableexists = False
+        
+        Dim tbl As ListObject
+        Dim sht As Worksheet
+
+        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        'Loop through each sheet and table in the workbook to find our table
+        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        For Each sht In ThisWorkbook.Worksheets
+            For Each tbl In sht.ListObjects
+                If tbl.Name = tableName Then
+                    tableexists = True
+                    Set table = tbl
+                    Set ws = sht
+                End If
+            Next tbl
+        Next sht
+
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        ' Create the table if needed. Add the hader rows
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        If tableexists = False Then
+            Dim tablerange As Range
+            ws.ListObjects.Add(xlSrcRange, Range("A1:AO1"), , xlYes).Name = tableName
+            i = 0
+            Set table = ws.ListObjects(tableName)
+            For Each key In data.Keys
+                table.Range(i + 1) = key
+                i = i + 1
+            Next
+        End If
+
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        ' Create a new row to hold our data
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        Dim newrow As ListRow
+        Set newrow = table.ListRows.Add
+        
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        ' Populate our newly collected data
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        For Each str In data.Keys
+            newrow.Range(table.ListColumns(str).Index) = data(str)
+        Next
+    End If
+End Sub

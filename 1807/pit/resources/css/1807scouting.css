@@ -1,0 +1,196 @@
+@font-face {
+    font-family: Russo-One;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/RussoOne-Regular.ttf);
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #121212;
+	font-family: Russo-One;
+}
+.field-image{
+    margin: 2vw;
+}
+
+.field-image-src{
+    background-position: center;
+    border: 1px solid;
+}
+
+#main-panel-holder{
+	position: absolute;
+    top: 10%;
+}
+
+.main-panel{
+    display: none;
+    height: 100%;
+    min-height: 100%;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    background-color: #121212;
+}
+
+
+.main-panel table{
+    border: none;
+}
+
+#prematch{
+    display: table;
+}
+
+#auton{
+}
+
+#teleop{
+}
+
+#endgame{
+}
+
+#postmatch{
+}
+
+#qr-code{
+  text-align: center;
+}
+
+
+h1{
+    font-family: Russo-One;
+    text-align: center;
+	    margin-block-end: 0em;
+	background-color: #121212;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    font-family: Russo-One;
+    text-align: center;
+	margin-block-start: 0.65em;
+}
+
+.match-label{
+    text-align: center;
+    font-family: calibri
+}
+
+.half-button-l{
+    width: 48%;
+    margin: 1vw;
+    height: 100%;
+}
+
+.half-button-r{
+    flex-grow: 1;
+    height: 100%;
+    width: 48%;
+    margin: 1vw;
+}
+
+.half-button-container{
+    display: flex;
+}
+
+h1 .odd {
+    font-family: Alexis;
+    text-align: center;
+    color: #0AB4EC;
+}
+
+h1 .even {
+    font-family: Alexis;
+    text-align: center;
+    color: #42B333;
+}
+
+table {
+    border: 1px solid #121212;
+    width: 100%;
+}
+
+td {
+    padding: 10px 4px;
+	font-family: Russo-One;
+	text-align: center;
+
+}
+
+input {
+    font-size: 16px;
+	font-family: Russo-One;
+}
+
+.title {
+    width: "50%";
+    text-align: right;
+}
+
+.field {
+    width: "50%";
+    text-align: left;
+}
+
+#qr-table {
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+.fancybutton {
+	font-family: Quicksand !important;
+    font-family: Quicksand !important;
+    background-color: #ffffff;
+    border: 2px solid #a09ec3;
+    color: black;
+    /* padding: 0.1em 0.1em; */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px 0 #000;
+
+}
+html input[type="CheckBox"] {    /* button size change */
+    background-color: transparent;
+    box-shadow: none;
+    height: 18px;
+    width: 18px ;
+    text-align: left;
+}
+.nextButton{
+	font-family:"Russo-One";
+    font-size:85;
+   	color:white;  
+    border:solid 2px;
+    background-color:black;
+    border-radius: 40px;
+	border-color: #00d586;
+    padding: 5px 20px;
+	text-align:center;
+}
+.prevButton{
+	font-family:"Russo-One";
+    font-size:85;
+   	color:white;  
+    border:solid 2px;
+    background-color:black;
+    border-radius: 40px;
+	border-color: #f74c18;
+    padding: 5px 20px;
+	text-align:center;
+}
+/*html input[type="Button"] {
+    height: 30px;
+    width: 60px ;   
+}  

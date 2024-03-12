@@ -1,0 +1,56 @@
+As	2023njrob	5666											working on it	dynamic claw mech		unknown	25	270 degrees of arm motion for claw, can move fast					N	N	Y		Y						x	x	x	x	n	a	n
+As	2023njrob	5624												spinning stationary  flywheel claw mech 		unknown	27	ramp is difficult					Y	Y	Y		N						a	x	x	a	a	a	x
+As	2023njrob	4653											in progress	claw mech		4.6 m/s	29	can hang over while balencing					Y	Y	Y		Y						v	x	x	x	n	n	v
+AS	2023njrob	4652											can score preloaded cube on mid	extend claw from bumper, pick up		1.7 m/s	26.5						Y	N	Y		Y						x	x	x	a	n	a	v
+AS	2023njrob	3314											working on three bot auto	the floor and the substation, intake for cubes	na	14 ft/s	27						Y	Y	Y		Y						n	n	x	x	n	n	x
+TM	2023njrob	293												claw	gyro	9.5	28						N	N	N		Y						x	a	x	x	n	a	n
+TM	2023njrob	87												claw on arm	gyro	idk	33						Y	N	Y		Y						x	x	x	a	n	a	x
+TM	2023njrob	316												arm	auto balance software 	17	25	LEDs to indicate game pieces 					Y	Y	N		Y						n	a	x	x	n	a	x
+TM	2023njrob	1089												arm	gyro not working yet	14	33						Y	N	N		Y						n	x	x	x	n	n	a
+TM	2023njrob	303												arm with claw	auto level software	13	30						Y	N	Y		Y						v	x	x	x	n	n	n
+gb	2023njrob	9015												croller claw	yes, scale mec	12	22						N	N	N		Y						v	a	x	x	n	a	x
+rm	2023njrob	1257												claw	yes, code	zippy	34.5						Y	Y	Y		Y						n	a	n	x	n	a	v
+rm	2023njrob	1626												claw with rollers	they shoot the cubes and drop the cones	14	30	cones shelf and cubes ground					Y	N	Y		N						n	a	x	x	n	a	x
+CE	2023njrob	2016											n/a	claw	n/a	13	33.5						N	N	N		Y						x	x	x	x	n	n	a
+CE	2023njrob	2495												claw	brake mode	n/a	22						N	N	Y		Y						n	n	x	x	n	a	n
+CE	2023njrob	2554												Claw	none	n/a	31.5	Mech e drive					Y	N	Y		Y						n	x	x	x	n	x	v
+CE	2023njrob	2191												claw	gyro	13	26						N	N	N		Y						x	a	x	x	n	n	v
+CE	2023njrob	2590												Roller claw	Gyro	18	32	2 limelights					Y	N	N		Y						n	a	x	x	n	n	x
+GB	2023pahat	1807																					N	N	N								x	x	x	x	x		
+gb	2023njrob	8714											trying	rollers	yes	don’t know	don’t know						N	N	Y		N						x	n	x	a	n	a	x
+gb	2023njrob	8707												no claw	no	don’t know	37						Y	N	N		N						x	n	a	a	n	a	a
+gb	2023njrob	9116												claw with rollers	no	don’t know	29						Y	N	N		N						a	a	x	a	n	a	n
+rm	2023njrob	1403												roller	no	15	25						N	Y	Y		Y						n	x	x	x	n	n	a
+rm	2023njrob	1812												claw	no	14	31.5						Y	N	Y		Y						a	a	x	a	n	n	x
+TD	2023njrob	7587												intake with arm	gyroscope	pretty fast	33						Y	N	N		Y						v	a	x	x	n	a	x
+AD	2023njrob	6897												both	yeah	13-14 mph	 22 in						Y	N	Y		Y						n	a	x	x	n	a	x
+AD	2023njrob	5684												shelf and ground	yeah	idk	25 in	can score 7 game pieces on average					Y	Y	Y		Y						n	a	x	x	n	a	n
+AD	2023njrob	8075												both 	yeah	idk	34 in						Y	N	Y		Y						a	a	a	x	n	a	x
+As	2023njrob	5666											working on it	dynamic claw mech		unknown	25	270 degrees of arm motion for claw, can move fast					N	N	Y		Y						x	x	x	x	n	a	n
+As	2023njrob	5624												spinning stationary  flywheel claw mech 		unknown	27	ramp is difficult					Y	Y	Y		N						a	x	x	a	a	a	x
+As	2023njrob	4653											in progress	claw mech		4.6 m/s	29	can hang over while balencing					Y	Y	Y		Y						v	x	x	x	n	n	v
+AS	2023njrob	4652											can score preloaded cube on mid	extend claw from bumper, pick up		1.7 m/s	26.5						Y	N	Y		Y						x	x	x	a	n	a	v
+AS	2023njrob	3314											working on three bot auto	the floor and the substation, intake for cubes	na	14 ft/s	27						Y	Y	Y		Y						n	n	x	x	n	n	x
+TM	2023njrob	293												claw	gyro	9.5	28						N	N	N		Y						x	a	x	x	n	a	n
+TM	2023njrob	87												claw on arm	gyro	idk	33						Y	N	Y		Y						x	x	x	a	n	a	x
+TM	2023njrob	316												arm	auto balance software 	17	25	LEDs to indicate game pieces 					Y	Y	N		Y						n	a	x	x	n	a	x
+TM	2023njrob	1089												arm	gyro not working yet	14	33						Y	N	N		Y						n	x	x	x	n	n	a
+TM	2023njrob	303												arm with claw	auto level software	13	30						Y	N	Y		Y						v	x	x	x	n	n	n
+gb	2023njrob	9015												croller claw	yes, scale mec	12	22						N	N	N		Y						v	a	x	x	n	a	x
+rm	2023njrob	1257												claw	yes, code	zippy	34.5						Y	Y	Y		Y						n	a	n	x	n	a	v
+rm	2023njrob	1626												claw with rollers	they shoot the cubes and drop the cones	14	30	cones shelf and cubes ground					Y	N	Y		N						n	a	x	x	n	a	x
+CE	2023njrob	2016											n/a	claw	n/a	13	33.5						N	N	N		Y						x	x	x	x	n	n	a
+CE	2023njrob	2495												claw	brake mode	n/a	22						N	N	Y		Y						n	n	x	x	n	a	n
+CE	2023njrob	2554												Claw	none	n/a	31.5	Mech e drive					Y	N	Y		Y						n	x	x	x	n	x	v
+CE	2023njrob	2191												claw	gyro	13	26						N	N	N		Y						x	a	x	x	n	n	v
+CE	2023njrob	2590												Roller claw	Gyro	18	32	2 limelights					Y	N	N		Y						n	a	x	x	n	n	x
+GB	2023pahat	1807																					N	N	N								x	x	x	x	x		
+gb	2023njrob	8714											trying	rollers	yes	don’t know	don’t know						N	N	Y		N						x	n	x	a	n	a	x
+gb	2023njrob	8707												no claw	no	don’t know	37						Y	N	N		N						x	n	a	a	n	a	a
+gb	2023njrob	9116												claw with rollers	no	don’t know	29						Y	N	N		N						a	a	x	a	n	a	n
+rm	2023njrob	1403												roller	no	15	25						N	Y	Y		Y						n	x	x	x	n	n	a
+rm	2023njrob	1812												claw	no	14	31.5						Y	N	Y		Y						a	a	x	a	n	n	x
+TD	2023njrob	7587												intake with arm	gyroscope	pretty fast	33						Y	N	N		Y						v	a	x	x	n	a	x
+AD	2023njrob	6897												both	yeah	13-14 mph	 22 in						Y	N	Y		Y						n	a	x	x	n	a	x
+AD	2023njrob	5684												shelf and ground	yeah	idk	25 in	can score 7 game pieces on average					Y	Y	Y		Y						n	a	x	x	n	a	n
+AD	2023njrob	8075												both 	yeah	idk	34 in						Y	N	Y		Y						a	a	a	x	n	a	x
